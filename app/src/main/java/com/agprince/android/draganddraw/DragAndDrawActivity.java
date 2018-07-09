@@ -1,13 +1,18 @@
 package com.agprince.android.draganddraw;
 
+import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.View;
 
-public class DragAndDrawActivity extends AppCompatActivity {
+public class DragAndDrawActivity extends SingleFragmentActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drag_and_draw);
+    protected Fragment createFragment() {
+        return DragAndDrawFragment.newInstance();
     }
+
 }
